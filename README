@@ -1,0 +1,42 @@
+a. Sai Geetha Kandepalli Cherukuru
+
+b. 7283210853
+
+c. In this assignment, I have simulated the system similar to Dijkstra to build map of network topology.
+	
+d. My code files are serverA.c,serverB.c,serverC.c,serverD.c and client.c.
+	serverA.c: ServerA boots up reading its associated neighbor's information and waits on TCP connect for sending
+			   its neighbor's information to client. And then it waits on its UDP socket to obtain the information 
+			   about network topology
+	serverB.c: ServerB boots up reading its associated neighbor's information and waits on TCP connect for sending
+			   its neighbor's information to client. And then it waits on its UDP socket to obtain the information 
+			   about network topology
+	serverC.c: ServerC boots up reading its associated neighbor's information and waits on TCP connect for sending
+			   its neighbor's information to client. And then it waits on its UDP socket to obtain the information 
+			   about network topology
+	serverD.c: ServerD boots up reading its associated neighbor's information and waits on TCP connect for sending
+			   its neighbor's information to client. And then it waits on its UDP socket to obtain the information 
+			   about network topology
+	client.c:  Client listens for requests on TCP and accepts the connection from servers and obtains their 
+				respective neighbors information. After receiving the required information, client will compute the 
+				adjacency matrix and sends the entire network information to all the servers using UDP socket. Now that client 
+				has information about entire network, it computes minimum spanning tree for building a map of network topology 
+	
+e. TA please use the following commands to run program
+	1. make clean 
+	2. make
+	3. After make, all code file executables are available and are ready to run. So please run the following 5 commands in 5 
+	different terminals in the specified order
+	 ./serverA 
+	 ./serverB 
+	 ./serverC
+	 ./serverD and 
+	 ./client 
+
+f. All the messages between client and server are parsed and exchanged in the string format.
+
+g. No idiosyncrasies in the project. 
+
+h. Referred Prim's Algorithm for computing minimum spanning tree.
+
+
